@@ -53,6 +53,13 @@
 
         .float-3d { animation: floating 6s ease-in-out infinite; }
         #navbar { transition: all 0.4s ease; top: 15px; }
+
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+        }
+        #mobile-menu.active { transform: translateX(0); }
         
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
@@ -63,48 +70,67 @@
 
     <div id="canvas-container"></div>
 
-    <nav id="navbar" class="fixed w-full z-[100] px-6">
-        <div class="max-w-7xl mx-auto glass rounded-2xl px-8 py-4 flex justify-between items-center border-white/10 shadow-2xl">
-            <a href="#" class="text-xl font-black tracking-tighter gradient-text">S M SAZIDUR RAHMAN</a>
-            <div class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-widest text-gray-400">
+    <nav id="navbar" class="fixed w-full z-[100] px-4 md:px-6">
+        <div class="max-w-7xl mx-auto glass rounded-2xl px-5 md:px-8 py-4 flex justify-between items-center border-white/10 shadow-2xl">
+            <a href="#" class="text-lg md:text-xl font-black tracking-tighter gradient-text">S M SAZIDUR RAHMAN</a>
+            
+            <div class="hidden md:flex space-x-6 lg:space-x-10 text-[10px] lg:text-[11px] font-bold uppercase tracking-widest text-gray-400">
                 <a href="#about" class="hover:text-white transition-all">About</a>
                 <a href="#education" class="hover:text-white transition-all">Education</a>
                 <a href="#projects" class="hover:text-white transition-all">Work</a>
                 <a href="#skills" class="hover:text-white transition-all">Skills</a>
                 <a href="#contact" class="hover:text-white transition-all">Connect</a>
             </div>
-            <a href="#contact" class="px-6 py-2 bg-white text-black text-xs font-black rounded-xl hover:bg-indigo-600 hover:text-white transition-all">HIRE ME</a>
+
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden md:block px-6 py-2 bg-white text-black text-xs font-black rounded-xl hover:bg-indigo-600 hover:text-white transition-all">HIRE ME</a>
+                
+                <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                    <i class="fas fa-bars-staggered"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <section id="about" class="pt-40 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex items-center">
-        <div class="grid lg:grid-cols-2 gap-16 items-center w-full">
+    <div id="mobile-menu" class="fixed inset-0 z-[110] glass md:hidden flex flex-col items-center justify-center space-y-8 text-2xl font-bold uppercase tracking-widest">
+        <button id="close-btn" class="absolute top-10 right-10 text-4xl text-white">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#about" class="mobile-link hover:text-indigo-400 transition-all">About</a>
+        <a href="#education" class="mobile-link hover:text-indigo-400 transition-all">Education</a>
+        <a href="#projects" class="mobile-link hover:text-indigo-400 transition-all">Work</a>
+        <a href="#skills" class="mobile-link hover:text-indigo-400 transition-all">Skills</a>
+        <a href="#contact" class="mobile-link hover:text-indigo-400 transition-all">Connect</a>
+    </div>
+
+    <section id="about" class="pt-32 md:pt-40 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center w-full">
             <div data-aos="fade-right">
-                <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6 md:mb-8 leading-none">
                     ENGINEERING <br/> <span class="gradient-text">SYSTEMS.</span>
                 </h1>
-                <p class="text-xl text-gray-400 mb-10 leading-relaxed max-w-lg">
+                <p class="text-lg md:text-xl text-gray-400 mb-8 md:mb-10 leading-relaxed max-w-lg">
                     I am <span class="text-white font-bold">S M Sazidur Rahman</span>, a Computer Science Engineering student at <span class="text-white">NUBTK</span>. I specialize in building <span class="text-white">Secure IoT</span>, Cloud Computing, and modern web architectures.
                 </p>
-                <div class="flex gap-6">
-                    <a href="https://drive.google.com/file/d/1mjl3ASeDl2wHDwkSTlLdXJ6nrUw1bLg2/view?usp=sharing" target="_blank" class="px-10 py-5 bg-indigo-600 rounded-2xl font-bold hover:bg-indigo-500 transition-all shadow-2xl shadow-indigo-500/30 flex items-center justify-center">
+                <div class="flex flex-wrap gap-4 md:gap-6">
+                    <a href="https://drive.google.com/file/d/1mjl3ASeDl2wHDwkSTlLdXJ6nrUw1bLg2/view?usp=sharing" target="_blank" class="px-8 md:px-10 py-4 md:py-5 bg-indigo-600 rounded-2xl font-bold hover:bg-indigo-500 transition-all shadow-2xl shadow-indigo-500/30 flex items-center justify-center text-sm md:text-base">
                         Download CV
                     </a>
                     <div class="flex gap-4 items-center">
-                        <a href="https://github.com/Shazid2099" target="_blank" class="w-14 h-14 glass rounded-2xl flex items-center justify-center hover:text-indigo-400 transition-colors text-xl">
+                        <a href="https://github.com/Shazid2099" target="_blank" class="w-12 h-12 md:w-14 md:h-14 glass rounded-2xl flex items-center justify-center hover:text-indigo-400 transition-colors text-lg md:text-xl">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#contact" class="w-14 h-14 glass rounded-2xl flex items-center justify-center hover:text-indigo-400 transition-colors text-xl">
+                        <a href="#contact" class="w-12 h-12 md:w-14 md:h-14 glass rounded-2xl flex items-center justify-center hover:text-indigo-400 transition-colors text-lg md:text-xl">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="float-3d hidden lg:flex justify-end" data-aos="zoom-in">
-                <div class="glass p-12 rounded-[3rem] border-white/20 relative overflow-hidden w-full max-w-lg shadow-2xl">
-                    <div class="absolute -right-10 -top-10 opacity-10"><i class="fas fa-microchip text-[12rem]"></i></div>
-                    <pre class="text-sm md:text-base leading-relaxed"><code class="text-indigo-300">
+            <div class="float-3d flex justify-center lg:justify-end mt-10 lg:mt-0" data-aos="zoom-in">
+                <div class="glass p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] border-white/20 relative overflow-hidden w-full max-w-lg shadow-2xl">
+                    <div class="absolute -right-6 -top-6 md:-right-10 md:-top-10 opacity-10"><i class="fas fa-microchip text-[6rem] md:text-[12rem]"></i></div>
+                    <pre class="text-[10px] md:text-sm lg:text-base leading-relaxed overflow-x-auto"><code class="text-indigo-300">
 <span class="text-purple-400">const</span> engineer = {
   name: <span class="text-amber-300">'Sazidur Rahman'</span>,
   dept: <span class="text-amber-300">'CSE'</span>,
@@ -120,105 +146,79 @@
     </section>
 
     <section id="education" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-5xl font-black mb-16 tracking-tight" data-aos="fade-up">EDUCATION</h2>
-        <div class="grid gap-8">
-            <div class="glass p-8 rounded-3xl" data-aos="fade-up">
-                <div class="flex justify-between items-start flex-wrap gap-4">
+        <h2 class="text-4xl md:text-5xl font-black mb-12 md:mb-16 tracking-tight" data-aos="fade-up">EDUCATION</h2>
+        <div class="grid gap-6 md:gap-8">
+            <div class="glass p-6 md:p-8 rounded-2xl md:rounded-3xl" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-4">
                     <div>
-                        <h3 class="text-2xl font-bold">B.Sc in Computer Science Engineering</h3>
+                        <h3 class="text-xl md:text-2xl font-bold">B.Sc in Computer Science Engineering</h3>
                         <p class="text-indigo-400 font-semibold">Northern University of Business and Technology Khulna</p>
                     </div>
-                    <span class="px-4 py-1 rounded-full bg-white/10 text-xs font-bold uppercase">2026 - Present</span>
+                    <span class="px-4 py-1 rounded-full bg-white/10 text-[10px] font-bold uppercase">2026 - Present</span>
                 </div>
             </div>
-            <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex justify-between items-start flex-wrap gap-4">
+            <div class="glass p-6 md:p-8 rounded-2xl md:rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-4">
                     <div>
-                        <h3 class="text-2xl font-bold">Higher Secondary Education</h3>
+                        <h3 class="text-xl md:text-2xl font-bold">Higher Secondary Education</h3>
                         <p class="text-indigo-400 font-semibold">Government Sundarban Adarsha College</p>
                         <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Jessore Board of Education</p>
                     </div>
-                    <span class="px-4 py-1 rounded-full bg-white/5 text-xs font-bold uppercase">Passed 2021</span>
+                    <span class="px-4 py-1 rounded-full bg-white/5 text-[10px] font-bold uppercase">Passed 2021</span>
                 </div>
             </div>
-            <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-                <div class="flex justify-between items-start flex-wrap gap-4">
+            <div class="glass p-6 md:p-8 rounded-2xl md:rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-4">
                     <div>
-                        <h3 class="text-2xl font-bold">Secondary Education</h3>
+                        <h3 class="text-xl md:text-2xl font-bold">Secondary Education</h3>
                         <p class="text-indigo-400 font-semibold">Saint Joseph's High School</p>
                         <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Jessore Board of Education</p>
                     </div>
-                    <span class="px-4 py-1 rounded-full bg-white/5 text-xs font-bold uppercase">Passed 2019</span>
+                    <span class="px-4 py-1 rounded-full bg-white/5 text-[10px] font-bold uppercase">Passed 2019</span>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-5xl font-black mb-16 tracking-tight text-right" data-aos="fade-up">FEATURED <span class="gradient-text">WORK</span></h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass p-8 rounded-[2rem] flex flex-col h-full" data-aos="fade-up">
-                <div class="bg-cyan-600/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="fas fa-plane text-2xl text-cyan-400"></i>
+        <h2 class="text-4xl md:text-5xl font-black mb-12 md:mb-16 tracking-tight text-right md:text-left" data-aos="fade-up">FEATURED <span class="gradient-text">WORK</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div class="glass p-6 md:p-8 rounded-2xl md:rounded-[2rem] flex flex-col h-full" data-aos="fade-up">
+                <div class="bg-cyan-600/10 w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-plane text-xl md:text-2xl text-cyan-400"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">Travel Website</h3>
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Travel Website</h3>
                 <p class="text-gray-400 text-sm mb-6 flex-grow">Interactive platform built using HTML, CSS, and JS to help users plan global trips.</p>
                 <a href="https://shazid2099.github.io/website/" target="_blank" class="text-cyan-400 font-bold hover:underline">Live Demo →</a>
             </div>
-            <div class="glass p-8 rounded-[2rem] flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
-                <div class="bg-emerald-600/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="fas fa-vault text-2xl text-emerald-400"></i>
+            <div class="glass p-6 md:p-8 rounded-2xl md:rounded-[2rem] flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-emerald-600/10 w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-vault text-xl md:text-2xl text-emerald-400"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">Bank Management System</h3>
-                <p class="text-gray-400 text-sm mb-6 flex-grow">Designed to securely manage accounts and financial records with an emphasis on data integrity.</p>
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Bank Management</h3>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">Designed to securely manage accounts and financial records with data integrity focus.</p>
                 <a href="javascript:void(0)" class="text-emerald-400/50 font-bold cursor-default">View System →</a>
             </div>
-            <div class="glass p-8 rounded-[2rem] flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-indigo-600/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="fas fa-hospital text-2xl text-indigo-400"></i>
+            <div class="glass p-6 md:p-8 rounded-2xl md:rounded-[2rem] flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-indigo-600/10 w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fas fa-hospital text-xl md:text-2xl text-indigo-400"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">Hospital Management</h3>
-                <p class="text-gray-400 text-sm mb-6 flex-grow">A system to efficiently manage patient records, appointments, and hospital operations.</p>
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Hospital Management</h3>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">A system to efficiently manage patient records, appointments, and operations.</p>
                 <a href="javascript:void(0)" class="text-indigo-400/50 font-bold cursor-default">Case Study →</a>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-5xl font-black mb-16 tracking-tight" data-aos="fade-up">SKILLS & <span class="gradient-text">TECH</span></h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="glass p-6 rounded-2xl text-center" data-aos="zoom-in">
-                <i class="fas fa-terminal text-2xl text-indigo-400 mb-3"></i>
-                <p class="font-bold text-white">Programming</p>
-                <p class="text-xs text-gray-400">C, C++, Java</p>
-            </div>
-            <div class="glass p-6 rounded-2xl text-center" data-aos="zoom-in" data-aos-delay="100">
-                <i class="fas fa-laptop-code text-2xl text-cyan-400 mb-3"></i>
-                <p class="font-bold text-white">Web Dev</p>
-                <p class="text-xs text-gray-400">HTML, JavaScript</p>
-            </div>
-            <div class="glass p-6 rounded-2xl text-center" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fas fa-shield-alt text-2xl text-purple-400 mb-3"></i>
-                <p class="font-bold text-white">Interests</p>
-                <p class="text-xs text-gray-400">Cyber Security, IoT</p>
-            </div>
-            <div class="glass p-6 rounded-2xl text-center" data-aos="zoom-in" data-aos-delay="300">
-                <i class="fas fa-tasks text-2xl text-emerald-400 mb-3"></i>
-                <p class="font-bold text-white">Software</p>
-                <p class="text-xs text-gray-400">Word, Excel, Photoshop</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" class="py-32 px-6 text-center bg-black/40 border-t border-white/5">
+    <footer id="contact" class="py-24 md:py-32 px-6 text-center bg-black/40 border-t border-white/5">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-6xl md:text-8xl font-black mb-12 tracking-tighter" data-aos="fade-up">CONNECT</h2>
-            <div class="flex flex-col items-center gap-4 mb-16" data-aos="fade-up">
-                <a href="mailto:sr2099200@gmail.com" class="text-2xl md:text-3xl font-bold hover:text-indigo-400 transition-colors">sr2099200@gmail.com</a>
-                <a href="tel:+8801826167783" class="text-2xl md:text-3xl font-bold hover:text-cyan-400 transition-colors">+880 1826-167783</a>
-                <p class="text-gray-500 font-bold uppercase tracking-widest mt-4">Khulna, Bangladesh</p>
+            <h2 class="text-5xl md:text-7xl lg:text-8xl font-black mb-8 md:mb-12 tracking-tighter" data-aos="fade-up">CONNECT</h2>
+            <div class="flex flex-col items-center gap-4 mb-12 md:mb-16" data-aos="fade-up">
+                <a href="mailto:sr2099200@gmail.com" class="text-lg md:text-2xl lg:text-3xl font-bold hover:text-indigo-400 transition-colors">sr2099200@gmail.com</a>
+                <a href="tel:+8801826167783" class="text-lg md:text-2xl lg:text-3xl font-bold hover:text-cyan-400 transition-colors">+880 1826-167783</a>
+                <p class="text-gray-500 font-bold uppercase tracking-widest mt-4 text-xs md:text-sm">Khulna, Bangladesh</p>
             </div>
-            <p class="text-[10px] font-black uppercase tracking-[0.4em] text-gray-700">
+            <p class="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-gray-700">
                 &copy; 2026 S M SAZIDUR RAHMAN
             </p>
         </div>
@@ -227,6 +227,26 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true });
+
+        // MOBILE MENU LOGIC
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
         
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);

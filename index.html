@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S M Sazidur Rahman | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #111111;
+            overflow-x: hidden; /* Prevents horizontal scrollbar during animations */
+        }
+        /* Custom 3D Button Press Effect */
+        .btn-3d {
+            transition: all 0.2s ease;
+            box-shadow: 4px 4px 0px #000;
+        }
+        .btn-3d:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #000;
+        }
+        .btn-3d:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px #000;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-black selection:text-white">
+
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-extrabold tracking-tighter uppercase">S M Sazidur Rahman</a>
+            <div class="hidden md:flex space-x-8 text-sm font-bold tracking-wide text-gray-600">
+                <a href="#about" class="hover:text-black transition-colors">ABOUT</a>
+                <a href="#projects" class="hover:text-black transition-colors">PROJECTS</a>
+                <a href="#education" class="hover:text-black transition-colors">EDUCATION</a>
+                <a href="#activities" class="hover:text-black transition-colors">ACTIVITIES</a>
+            </div>
+            <a href="#contact" class="px-5 py-2 bg-black text-white text-sm font-bold rounded btn-3d">CONTACT</a>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-40 pb-20 px-6 max-w-7xl mx-auto flex flex-col justify-center min-h-[85vh]">
+        <div class="max-w-4xl" data-aos="fade-right" data-aos-duration="1000">
+            <p class="text-gray-500 font-bold tracking-widest text-sm mb-4 uppercase">Portfolio & Resume</p>
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-tight mb-6 uppercase">
+                S M SAZIDUR <br/> RAHMAN
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-light text-gray-600 mb-10 border-l-4 border-black pl-4">
+                Computer Science Student & Developer
+            </h2>
+            <div class="flex space-x-6">
+                <a href="mailto:sr2099200@gmail.com" class="w-12 h-12 flex items-center justify-center border-2 border-black rounded-full bg-white text-black btn-3d"><i class="fas fa-envelope text-xl"></i></a>
+                <a href="https://github.com/Shazid2099" target="_blank" class="w-12 h-12 flex items-center justify-center border-2 border-black rounded-full bg-white text-black btn-3d"><i class="fab fa-github text-xl"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-white border-y border-gray-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-duration="800">
+                <h3 class="text-sm font-bold tracking-widest uppercase text-gray-400 mb-2">01. Summary</h3>
+                <h2 class="text-4xl font-extrabold">About Me</h2>
+            </div>
+            <div class="md:col-span-2 text-lg text-gray-600 leading-relaxed space-y-6 bg-gray-50 p-8 rounded-xl shadow-inner border border-gray-100" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                <p>
+                    I am a dedicated Computer Science Engineering student currently pursuing my B.Sc at Northern University of Business and Technology Khulna. I have a strong foundation in software development, web technologies, and system design.
+                </p>
+                <p>
+                    I am deeply interested in exploring advanced technologies, with specific career interests in <span class="text-black font-bold">IoT Systems, Cloud Computing, Cyber Security, and Artificial Intelligence</span>. I am constantly seeking to solve complex problems and build efficient, user-centered applications.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto overflow-hidden">
+        <div class="mb-16" data-aos="fade-up" data-aos-duration="800">
+            <h3 class="text-sm font-bold tracking-widest uppercase text-gray-400 mb-2">02. Portfolio</h3>
+            <h2 class="text-4xl font-extrabold">Research & Projects</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="100" class="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-300 group flex flex-col">
+                <div class="h-56 bg-gray-200 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop&grayscale=true" alt="Hospital Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                </div>
+                <div class="p-8 flex-1">
+                    <span class="text-xs font-bold bg-black text-white px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-md">Database System</span>
+                    <h3 class="text-xl font-extrabold mb-3">Hospital Management System</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Developed a comprehensive system to efficiently manage patient records, appointments, and hospital operations. Improves workflow and reduces manual administrative errors.
+                    </p>
+                </div>
+            </div>
+            
+            <div data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="200" class="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-300 group flex flex-col">
+                <div class="h-56 bg-gray-200 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=800&auto=format&fit=crop&grayscale=true" alt="Travel Website" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                </div>
+                <div class="p-8 flex-1">
+                    <span class="text-xs font-bold bg-black text-white px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-md">Web Development</span>
+                    <h3 class="text-xl font-extrabold mb-3">Interactive Travel Website</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Designed a responsive travel website to help users explore destinations and plan trips. Built using HTML, CSS, and JavaScript featuring destination guides and interactive navigation.
+                    </p>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300" class="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-300 group flex flex-col">
+                <div class="h-56 bg-gray-200 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1616803140344-6682afb13cda?q=80&w=800&auto=format&fit=crop&grayscale=true" alt="Bank Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                </div>
+                <div class="p-8 flex-1">
+                    <span class="text-xs font-bold bg-black text-white px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-md">Software Application</span>
+                    <h3 class="text-xl font-extrabold mb-3">Bank Management System</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Developed a robust banking system to handle user accounts, secure transactions, and data management. Designed to streamline financial operations and ensure data integrity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-24 px-6 bg-black text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gray-900 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gray-800 rounded-full blur-3xl opacity-30 translate-y-1/2 -translate-x-1/2"></div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 relative z-10">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <h3 class="text-sm font-bold tracking-widest uppercase text-gray-400 mb-8">03. Background</h3>
+                <h2 class="text-4xl font-extrabold mb-10 border-b-2 border-gray-800 pb-4">Education</h2>
+                
+                <div class="mb-8 relative pl-6 border-l border-gray-700">
+                    <div class="absolute w-3 h-3 bg-white rounded-full -left-[6.5px] top-2 shadow-[0_0_10px_rgba(255,255,255,0.8)]"></div>
+                    <h3 class="text-xl font-bold">B.Sc Computer Science Engineering</h3>
+                    <p class="text-gray-400 font-semibold mt-1">Northern University of Business & Technology</p>
+                    <p class="text-xs tracking-wider text-gray-500 mt-2 uppercase">2026 - Present | Khulna</p>
+                </div>
+                
+                <div class="mb-8 relative pl-6 border-l border-gray-700">
+                    <div class="absolute w-3 h-3 bg-gray-600 rounded-full -left-[6.5px] top-2"></div>
+                    <h3 class="text-xl font-bold">Higher Secondary Education (HSC)</h3>
+                    <p class="text-gray-400 font-semibold mt-1">Government Sundarban Adarsha College</p>
+                    <p class="text-xs tracking-wider text-gray-500 mt-2 uppercase">2021 | Jessore Board</p>
+                </div>
+
+                <div class="relative pl-6 border-l border-gray-700">
+                    <div class="absolute w-3 h-3 bg-gray-600 rounded-full -left-[6.5px] top-2"></div>
+                    <h3 class="text-xl font-bold">Secondary Education (SSC)</h3>
+                    <p class="text-gray-400 font-semibold mt-1">Saint Joseph's High School</p>
+                    <p class="text-xs tracking-wider text-gray-500 mt-2 uppercase">2019 | Jessore Board</p>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="1000">
+                <h3 class="text-sm font-bold tracking-widest uppercase text-transparent mb-8">.</h3>
+                <h2 class="text-4xl font-extrabold mb-10 border-b-2 border-gray-800 pb-4">Skills & Certifications</h2>
+                
+                <div class="mb-12">
+                    <div class="flex flex-wrap gap-3">
+                        <span data-aos="flip-up" data-aos-delay="100" class="px-5 py-3 bg-gray-900 border border-gray-700 rounded-lg text-sm font-bold shadow-[4px_4px_0px_rgba(255,255,255,0.1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(255,255,255,0.2)] transition-all cursor-default">C / C++</span>
+                        <span data-aos="flip-up" data-aos-delay="200" class="px-5 py-3 bg-gray-900 border border-gray-700 rounded-lg text-sm font-bold shadow-[4px_4px_0px_rgba(255,255,255,0.1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(255,255,255,0.2)] transition-all cursor-default">Java</span>
+                        <span data-aos="flip-up" data-aos-delay="300" class="px-5 py-3 bg-gray-900 border border-gray-700 rounded-lg text-sm font-bold shadow-[4px_4px_0px_rgba(255,255,255,0.1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(255,255,255,0.2)] transition-all cursor-default">HTML & JS</span>
+                        <span data-aos="flip-up" data-aos-delay="400" class="px-5 py-3 bg-gray-900 border border-gray-700 rounded-lg text-sm font-bold shadow-[4px_4px_0px_rgba(255,255,255,0.1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(255,255,255,0.2)] transition-all cursor-default">Mac OS</span>
+                        <span data-aos="flip-up" data-aos-delay="500" class="px-5 py-3 bg-gray-900 border border-gray-700 rounded-lg text-sm font-bold shadow-[4px_4px_0px_rgba(255,255,255,0.1)] hover:-translate-y-1 hover:shadow-[6px_6px_0px_rgba(255,255,255,0.2)] transition-all cursor-default">Photoshop</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 border border-gray-700 p-6 rounded-xl shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="text-sm font-bold mb-5 uppercase tracking-wider text-gray-400 border-b border-gray-800 pb-2">Training</h4>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start bg-black/50 p-3 rounded border border-gray-800">
+                            <i class="fas fa-award mt-1 mr-4 text-white text-xl"></i>
+                            <div>
+                                <strong class="text-white block">DEV210.3X: Advanced C++</strong>
+                                <span class="text-sm text-gray-400">Proficiency course by Microsoft</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start bg-black/50 p-3 rounded border border-gray-800">
+                            <i class="fas fa-laptop-code mt-1 mr-4 text-white text-xl"></i>
+                            <div>
+                                <strong class="text-white block">Web Developer Training</strong>
+                                <span class="text-sm text-gray-400">Attended via local IT Company</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="py-24 px-6 max-w-7xl mx-auto overflow-hidden">
+        <div data-aos="fade-up" data-aos-duration="800">
+            <h3 class="text-sm font-bold tracking-widest uppercase text-gray-400 mb-2 text-center">04. Engagement</h3>
+            <h2 class="text-4xl font-extrabold mb-16 text-center">Co-Curricular Events</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100" class="p-8 bg-white border-2 border-black rounded-xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 relative overflow-hidden">
+                <i class="fas fa-users text-4xl text-gray-200 absolute top-4 right-4 z-0"></i>
+                <div class="relative z-10">
+                    <h3 class="text-xl font-extrabold mb-1">Community Service</h3>
+                    <p class="text-xs text-black font-bold mb-4 px-2 py-1 bg-gray-200 inline-block rounded uppercase tracking-wider">2022</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Contributed to local cleanliness and awareness activities. Worked with a team to support community initiatives, improving the environment.</p>
+                </div>
+            </div>
+            
+            <div data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200" class="p-8 bg-white border-2 border-black rounded-xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 relative overflow-hidden">
+                <i class="fas fa-campground text-4xl text-gray-200 absolute top-4 right-4 z-0"></i>
+                <div class="relative z-10">
+                    <h3 class="text-xl font-extrabold mb-1">Scout Program</h3>
+                    <p class="text-xs text-black font-bold mb-4 px-2 py-1 bg-gray-200 inline-block rounded uppercase tracking-wider">2019</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Developed strong leadership, teamwork, and problem-solving skills through camping, hiking, first aid training, and various outdoor activities.</p>
+                </div>
+            </div>
+
+            <div data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300" class="p-8 bg-white border-2 border-black rounded-xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 relative overflow-hidden">
+                <i class="fas fa-leaf text-4xl text-gray-200 absolute top-4 right-4 z-0"></i>
+                <div class="relative z-10">
+                    <h3 class="text-xl font-extrabold mb-1">Tree Plantation</h3>
+                    <p class="text-xs text-black font-bold mb-4 px-2 py-1 bg-gray-200 inline-block rounded uppercase tracking-wider">2017</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Collaborated with team members to plant and maintain saplings, spreading awareness about the importance of trees in combating climate change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-white py-16 px-6 border-t-4 border-black mt-10 overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-10 md:mb-0 text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
+                <h2 class="text-5xl font-extrabold mb-3 tracking-tighter">Let's Connect.</h2>
+                <p class="text-gray-500 font-medium">Always open to discussing new projects and opportunities.</p>
+            </div>
+            
+            <div class="text-left space-y-5 text-sm font-bold bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-sm w-full md:w-auto" data-aos="fade-left" data-aos-duration="1000">
+                <a href="tel:+8801826167783" class="flex items-center text-gray-700 hover:text-black transition-colors group">
+                    <div class="w-12 h-12 flex flex-shrink-0 items-center justify-center bg-black text-white rounded-full mr-5 shadow-md group-hover:scale-110 transition-transform">
+                        <i class="fas fa-phone text-lg"></i>
+                    </div>
+                    <span class="text-base">+880 1826 167783</span>
+                </a>
+                
+                <a href="mailto:sr2099200@gmail.com" class="flex items-center text-gray-700 hover:text-black transition-colors group">
+                    <div class="w-12 h-12 flex flex-shrink-0 items-center justify-center bg-black text-white rounded-full mr-5 shadow-md group-hover:scale-110 transition-transform">
+                        <i class="fas fa-envelope text-lg"></i>
+                    </div>
+                    <span class="text-base">sr2099200@gmail.com</span>
+                </a>
+
+                <div class="flex items-center text-gray-700 group cursor-default">
+                    <div class="w-12 h-12 flex flex-shrink-0 items-center justify-center bg-black text-white rounded-full mr-5 shadow-md group-hover:scale-110 transition-transform">
+                        <i class="fas fa-map-marker-alt text-lg"></i>
+                    </div>
+                    <span class="text-base">Khulna, Bangladesh</span>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-200 text-center text-xs text-gray-400 font-bold tracking-widest uppercase" data-aos="fade-up" data-aos-duration="800">
+            &copy; 2026 S M Sazidur Rahman. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false, // Changed from true to false: Animations will replay every time you scroll up and down
+            offset: 100, // Offset (in px) from the original trigger point
+            easing: 'ease-out-cubic', // Default easing for AOS animations
+        });
+    </script>
+</body>
+</html>
